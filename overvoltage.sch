@@ -1,0 +1,438 @@
+EESchema Schematic File Version 4
+LIBS:overvoltage-cache
+EELAYER 29 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Repro Overvoltage Protection Board"
+Date "2019-04-14"
+Rev "1"
+Comp "Marc Deslauriers"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x15_Female 1J1
+U 1 1 5CB0B205
+P 4600 3950
+F 0 "1J1" H 4450 4800 50  0000 L CNN
+F 1 "Conn_01x15_Female" H 4628 3885 50  0001 L CNN
+F 2 "1-640384-5:TE_1-640384-5" H 4600 3950 50  0001 C CNN
+F 3 "~" H 4600 3950 50  0001 C CNN
+	1    4600 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x15_Male 1J2
+U 1 1 5CB0E410
+P 3400 3950
+F 0 "1J2" H 3500 4800 50  0000 C CNN
+F 1 "Conn_01x15_Male" H 3508 4740 50  0001 C CNN
+F 2 "1-640384-5:TE_1-640384-5" H 3400 3950 50  0001 C CNN
+F 3 "~" H 3400 3950 50  0001 C CNN
+	1    3400 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3250 4400 3250
+Wire Wire Line
+	3600 3450 4400 3450
+Wire Wire Line
+	3600 3550 4400 3550
+Wire Wire Line
+	3600 3650 3800 3650
+Wire Wire Line
+	3600 4250 3800 4250
+Wire Wire Line
+	3800 4250 3800 4150
+Wire Wire Line
+	3600 3850 3800 3850
+Wire Wire Line
+	3600 3950 3800 3950
+Connection ~ 3800 3950
+Wire Wire Line
+	3800 3950 3800 3850
+Wire Wire Line
+	3600 4050 3800 4050
+Connection ~ 3800 4050
+Wire Wire Line
+	3800 4050 3800 3950
+Wire Wire Line
+	3600 4150 3800 4150
+Connection ~ 3800 4150
+Wire Wire Line
+	3800 4150 3800 4050
+Wire Wire Line
+	3600 4650 3800 4650
+Wire Wire Line
+	3600 4350 3800 4350
+Wire Wire Line
+	3800 4350 3800 4450
+Connection ~ 3800 4650
+Wire Wire Line
+	3800 4650 4400 4650
+Wire Wire Line
+	3600 4450 3800 4450
+Connection ~ 3800 4450
+Wire Wire Line
+	3800 4450 3800 4550
+Wire Wire Line
+	3600 4550 3800 4550
+Connection ~ 3800 4550
+Wire Wire Line
+	3800 4550 3800 4650
+$Comp
+L Device:D_Zener_Small ZR1
+U 1 1 5CB19656
+P 5150 3750
+F 0 "ZR1" V 5104 3818 50  0000 L CNN
+F 1 "1N5244B" V 5195 3818 50  0000 L CNN
+F 2 "Diode_THT:D_A-405_P10.16mm_Horizontal" V 5150 3750 50  0001 C CNN
+F 3 "~" V 5150 3750 50  0001 C CNN
+	1    5150 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R8
+U 1 1 5CB1A3D5
+P 5150 3550
+F 0 "R8" H 5218 3596 50  0000 L CNN
+F 1 "10Ω" H 5218 3505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5150 3550 50  0001 C CNN
+F 3 "~" H 5150 3550 50  0001 C CNN
+	1    5150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R2
+U 1 1 5CB1AEB2
+P 5150 3250
+F 0 "R2" H 5218 3296 50  0000 L CNN
+F 1 "100Ω" H 5218 3205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5150 3250 50  0001 C CNN
+F 3 "~" H 5150 3250 50  0001 C CNN
+	1    5150 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_Small ZR2
+U 1 1 5CB1D93A
+P 5150 4100
+F 0 "ZR2" V 5196 4032 50  0000 R CNN
+F 1 "1N5234" V 5105 4032 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P10.16mm_Horizontal" V 5150 4100 50  0001 C CNN
+F 3 "~" V 5150 4100 50  0001 C CNN
+	1    5150 4100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R3
+U 1 1 5CB1EA3A
+P 5150 4300
+F 0 "R3" H 5218 4346 50  0000 L CNN
+F 1 "10Ω" H 5218 4255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5150 4300 50  0001 C CNN
+F 3 "~" H 5150 4300 50  0001 C CNN
+	1    5150 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 5CB1F1C4
+P 5150 4650
+F 0 "R1" H 5218 4696 50  0000 L CNN
+F 1 "100Ω" H 5218 4605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5150 4650 50  0001 C CNN
+F 3 "~" H 5150 4650 50  0001 C CNN
+	1    5150 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PNP_EBC Q2
+U 1 1 5CB20541
+P 5850 3400
+F 0 "Q2" H 6041 3354 50  0000 L CNN
+F 1 "MPSA55" H 6041 3445 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92" H 6050 3500 50  0001 C CNN
+F 3 "~" H 5850 3400 50  0001 C CNN
+	1    5850 3400
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Q_PNP_EBC Q1
+U 1 1 5CB22684
+P 5850 4450
+F 0 "Q1" H 6041 4496 50  0000 L CNN
+F 1 "MPSA55" H 6041 4405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92" H 6050 4550 50  0001 C CNN
+F 3 "~" H 5850 4450 50  0001 C CNN
+	1    5850 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R6
+U 1 1 5CB22D6F
+P 6650 3750
+F 0 "R6" H 6718 3796 50  0000 L CNN
+F 1 "100Ω" H 6718 3705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 6650 3750 50  0001 C CNN
+F 3 "~" H 6650 3750 50  0001 C CNN
+	1    6650 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R7
+U 1 1 5CB23795
+P 6300 3600
+F 0 "R7" V 6400 3600 50  0000 C CNN
+F 1 "22Ω" V 6500 3600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 6300 3600 50  0001 C CNN
+F 3 "~" H 6300 3600 50  0001 C CNN
+	1    6300 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R4
+U 1 1 5CB272F1
+P 6300 4250
+F 0 "R4" V 6095 4250 50  0000 C CNN
+F 1 "22Ω" V 6186 4250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 6300 4250 50  0001 C CNN
+F 3 "~" H 6300 4250 50  0001 C CNN
+	1    6300 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R5
+U 1 1 5CB296EB
+P 6650 4100
+F 0 "R5" H 6718 4146 50  0000 L CNN
+F 1 "100Ω" H 6718 4055 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 6650 4100 50  0001 C CNN
+F 3 "~" H 6650 4100 50  0001 C CNN
+	1    6650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5CB2A74D
+P 7000 3750
+F 0 "C2" H 7092 3796 50  0000 L CNN
+F 1 ".1 uF" H 7092 3705 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P10.00mm_Horizontal" H 7000 3750 50  0001 C CNN
+F 3 "~" H 7000 3750 50  0001 C CNN
+	1    7000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5CB2ADBC
+P 7000 4100
+F 0 "C1" H 7092 4146 50  0000 L CNN
+F 1 ".1 uF" H 7092 4055 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P10.00mm_Horizontal" H 7000 4100 50  0001 C CNN
+F 3 "~" H 7000 4100 50  0001 C CNN
+	1    7000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_SCR_KAG Q4
+U 1 1 5CB2B511
+P 7500 3400
+F 0 "Q4" H 7588 3446 50  0000 L CNN
+F 1 "C122F" H 7588 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" V 7500 3400 50  0001 C CNN
+F 3 "~" V 7500 3400 50  0001 C CNN
+	1    7500 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_SCR_KAG Q3
+U 1 1 5CB2BEA6
+P 7500 4450
+F 0 "Q3" H 7588 4404 50  0000 L CNN
+F 1 "C122F" H 7588 4495 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" V 7500 4450 50  0001 C CNN
+F 3 "~" V 7500 4450 50  0001 C CNN
+	1    7500 4450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5150 3850 5150 3950
+Wire Wire Line
+	5150 4400 5150 4450
+Wire Wire Line
+	4400 4650 4650 4650
+Wire Wire Line
+	4650 4650 4650 4850
+Wire Wire Line
+	4650 4850 5150 4850
+Wire Wire Line
+	7500 4850 7500 4600
+Connection ~ 4400 4650
+Wire Wire Line
+	5950 4650 5950 4850
+Connection ~ 5950 4850
+Wire Wire Line
+	5950 4850 7500 4850
+Wire Wire Line
+	5150 4750 5150 4850
+Connection ~ 5150 4850
+Wire Wire Line
+	5150 4850 5950 4850
+Wire Wire Line
+	5950 4250 6200 4250
+Wire Wire Line
+	6400 4250 6650 4250
+Wire Wire Line
+	7250 4250 7350 4350
+Wire Wire Line
+	7000 4200 7000 4250
+Connection ~ 7000 4250
+Wire Wire Line
+	7000 4250 7250 4250
+Wire Wire Line
+	6650 4200 6650 4250
+Connection ~ 6650 4250
+Wire Wire Line
+	6650 4250 7000 4250
+Wire Wire Line
+	6650 4000 5150 4000
+Connection ~ 5150 4000
+Wire Wire Line
+	6650 4000 7000 4000
+Connection ~ 6650 4000
+Wire Wire Line
+	7500 4300 7500 4000
+Wire Wire Line
+	7500 4000 7000 4000
+Connection ~ 7000 4000
+Wire Wire Line
+	6650 3850 5150 3850
+Connection ~ 5150 3850
+Wire Wire Line
+	6650 3850 7000 3850
+Connection ~ 6650 3850
+Wire Wire Line
+	7000 3850 7500 3850
+Wire Wire Line
+	7500 3850 7500 3550
+Connection ~ 7000 3850
+Wire Wire Line
+	5950 3600 6200 3600
+Wire Wire Line
+	6400 3600 6650 3600
+Wire Wire Line
+	6650 3600 6650 3650
+Wire Wire Line
+	6650 3600 7000 3600
+Wire Wire Line
+	7000 3600 7000 3650
+Connection ~ 6650 3600
+Wire Wire Line
+	7350 3500 7250 3600
+Wire Wire Line
+	7250 3600 7000 3600
+Connection ~ 7000 3600
+Wire Wire Line
+	5150 3450 5150 3400
+Wire Wire Line
+	4400 3450 4650 3450
+Wire Wire Line
+	4650 3450 4650 3050
+Wire Wire Line
+	4650 3050 5150 3050
+Wire Wire Line
+	5150 3050 5150 3150
+Connection ~ 4400 3450
+Wire Wire Line
+	5950 3200 5950 3050
+Wire Wire Line
+	5950 3050 5150 3050
+Connection ~ 5150 3050
+Wire Wire Line
+	7500 3250 7500 3050
+Wire Wire Line
+	7500 3050 5950 3050
+Connection ~ 5950 3050
+Wire Wire Line
+	4400 3850 4650 3850
+Wire Wire Line
+	4650 3850 4650 3950
+Wire Wire Line
+	4650 3950 4400 3950
+Wire Wire Line
+	4650 3950 4650 4050
+Wire Wire Line
+	4650 4050 4400 4050
+Connection ~ 4650 3950
+Wire Wire Line
+	4400 4150 4650 4150
+Wire Wire Line
+	4650 4150 4650 4050
+Connection ~ 4650 4050
+Wire Wire Line
+	4400 4250 4650 4250
+Wire Wire Line
+	4650 4250 4650 4150
+Connection ~ 4650 4150
+Wire Wire Line
+	5150 3950 4650 3950
+Connection ~ 5150 3950
+Wire Wire Line
+	5150 3950 5150 4000
+Wire Wire Line
+	4400 4350 4650 4350
+Wire Wire Line
+	4650 4350 4650 4450
+Connection ~ 4650 4650
+Wire Wire Line
+	4400 4450 4650 4450
+Connection ~ 4650 4450
+Wire Wire Line
+	4650 4450 4650 4550
+Wire Wire Line
+	4400 4550 4650 4550
+Connection ~ 4650 4550
+Wire Wire Line
+	4650 4550 4650 4650
+Wire Wire Line
+	3600 3750 3800 3750
+Wire Wire Line
+	3800 3850 4400 3850
+Connection ~ 3800 3850
+Connection ~ 4400 3850
+Wire Wire Line
+	3800 3650 3800 3750
+Connection ~ 3800 3650
+Wire Wire Line
+	3800 3650 4400 3650
+Connection ~ 3800 3750
+Wire Wire Line
+	3800 3750 4400 3750
+Text Label 4000 3250 0    50   ~ 0
+-5v
+Text Label 3950 3450 0    50   ~ 0
++12v
+Text Label 3950 3550 0    50   ~ 0
+-12vUnreg
+Text Label 3950 3650 0    50   ~ 0
++12vUnreg
+Text Label 4000 3850 0    50   ~ 0
+GND
+Text Label 4000 4650 0    50   ~ 0
++5v
+Wire Wire Line
+	5650 4450 5150 4450
+Connection ~ 5150 4450
+Wire Wire Line
+	5150 4450 5150 4550
+Wire Wire Line
+	5650 3400 5150 3400
+Connection ~ 5150 3400
+Wire Wire Line
+	5150 3400 5150 3350
+$EndSCHEMATC
